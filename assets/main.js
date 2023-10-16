@@ -8,6 +8,7 @@ class Game {
     constructor() {
         this.players = ["O", "X"]
         this.show_player = document.querySelector("#player")
+        this.show_winner = document.querySelector("#winner")
         this.win = null
 
         this.condition_win = [
@@ -40,14 +41,8 @@ class Game {
             
             if  (this.numbers_blocks.includes(name) && !this.blocks_validated.includes(name) && !this.win) {
                 this.blocks_validated.push(name)
-                console.log("sim")
                 this.set_click(el, name)
                 this.check_win()
-            }
-
-            if (this.blocks_validated.length == 9){
-                
-                console.log("acabou!")
             }
         }) 
     }
@@ -82,8 +77,8 @@ class Game {
                 if (this.x.includes(n)) {
                     cont_x++
                     if (cont_x == 3) {
-                        console.log("X ganhou!")
                         this.win = "X"
+                        this.show_winner.innerText = this.win
                         this.restart_game()
                         this.set_player("O")
                     }
@@ -91,8 +86,8 @@ class Game {
                 if (this.o.includes(n)) {
                     cont_o++
                     if (cont_o == 3) {
-                        console.log("O ganhou!")
                         this.win = "O"
+                        this.show_winner.innerText = this.win
                         this.restart_game()
                         this.set_player("X")
                     }
