@@ -1,4 +1,5 @@
-function random_number(min, max) {
+(function () {
+    function random_number(min, max) {
     max++
     return Math.floor(Math.random() * (max - min) + min)
 }
@@ -6,7 +7,7 @@ function random_number(min, max) {
 class Game {
     constructor() {
         this.players = ["O", "X"]
-        this.el_player = document.querySelector("#player")
+        this.show_player = document.querySelector("#player")
         this.win = null
 
         this.condition_win = [
@@ -22,7 +23,6 @@ class Game {
         this.numbers_blocks = ["1", "2", "3" ,"4", "5" , "6", "7", "8", "9"]
 
         this.blocks = document.querySelectorAll(".blocks")
-        this.block = document.querySelector(".blocks").getAttribute
 
         this.blocks_validated = new Array()
 
@@ -33,10 +33,7 @@ class Game {
 
     init() {
         this.random_player()
-        document.addEventListener("load", e => {
-            
-        })
-
+    
         document.addEventListener("click" , e => {
             const el = e.target
             const name = el.getAttribute("name")
@@ -55,6 +52,11 @@ class Game {
         }) 
     }
 
+    set_player(p) {
+        this.player = p
+        this.show_player.innerText = p
+    }
+
     set_click(el, name) {
         const id = el.getAttribute("id")
         const square = el.querySelector(`#${id}-text`)
@@ -62,15 +64,14 @@ class Game {
         if (this.player == "O"){
             square.innerText = "O"
             this.o.push(name)
-            this.player = "X"
+            this.set_player("X")
         }
         else if (this.player == "X"){
             square.innerText = "X"
             this.x.push(name)
-            this.player = "O"
+            this.set_player("O")
         }
 
-        this.el_player.innerText = this.player
     }
 
     check_win() {
@@ -83,6 +84,8 @@ class Game {
                     if (cont_x == 3) {
                         console.log("X ganhou!")
                         this.win = "X"
+                        this.restart_game()
+                        this.set_player("O")
                     }
                 }  
                 if (this.o.includes(n)) {
@@ -90,19 +93,34 @@ class Game {
                     if (cont_o == 3) {
                         console.log("O ganhou!")
                         this.win = "O"
+                        this.restart_game()
+                        this.set_player("X")
                     }
                 }  
             })
         })
     }
 
+    restart_game() {
+        this.blocks.forEach((el) => {
+            const id = el.getAttribute("id")
+            const el_position = el.querySelector(`#${id}-text`)
+            el_position.innerText= ""
+        })
+        this.win = null
+        this.blocks_validated = new Array()
+        this.o = new Array()
+        this.x = new Array()
+
+    }
+
     random_player() {
         const random = random_number(0, 1)  
         this.player = this.players[random]
-        this.el_player.innerText = this.player
+        this.show_player.innerText = this.player
     }
 
 }
 const game = new Game()
 game.init()
-
+}())
