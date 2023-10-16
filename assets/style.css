@@ -19,6 +19,17 @@ body {
     color: rgb(43, 220, 226);
 }
 
+#show-winner {
+    text-align: center;
+    display: block;
+
+    font-size: 2em;
+}
+
+#winner {
+    color: green;
+}
+
 #player {
     font-size: 3em;
 }
