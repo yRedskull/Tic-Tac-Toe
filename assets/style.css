@@ -1,0 +1,78 @@
+body {
+    background: linear-gradient(to right, rgb(26, 25, 25), rgb(24, 21, 18), rgb(0, 0, 0));
+
+    color: white;
+
+    padding: 10px;
+}
+
+#title {
+    text-align: center;
+    font-size: 3.5em;
+
+}
+
+#show-player {
+
+    text-align: center;
+    font-size: 2em;
+    color: rgb(43, 220, 226);
+}
+
+#player {
+    font-size: 3em;
+}
+
+
+#game {
+    display: block;
+    margin: 60px auto 0px auto;
+    
+
+    min-width: 200px;
+    max-width: 600px;
+    aspect-ratio: 4/3;
+
+}
+
+#row_A, #row_B, #row_C {
+    height: 150px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+#row_B{
+    border-bottom: 10px solid rgba(59, 118, 167, 0.945);
+    border-top: 10px solid rgba(59, 118, 167, 0.945);
+
+
+}
+
+.blocks {
+    height: 150px;
+    min-width: 66px;
+    max-width: 200px;
+
+    cursor: pointer;
+
+    flex: 1;
+
+    text-align: center;
+}
+
+#a1, #b1, #c1 {
+    border-right: 10px solid rgba(255, 255, 255, 0.945);
+}
+
+#a3, #b3, #c3 {
+    border-left: 10px solid rgba(255, 255, 255, 0.945);
+}
+
+.texts {
+    display: block;
+    margin: auto;
+
+    font-size: 6em;
+    font-weight: bolder;
+}
