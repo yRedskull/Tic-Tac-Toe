@@ -4,14 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da Velha</title>
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/modal.css">
+    <link rel="stylesheet" href="./assets/css/game.css">
+    <link rel="shortcut icon" href="./assets/img/icon.png" type="image/x-icon">
 </head>
 <body>
     <h1 id="title">Jogo da Velha</h1>
-    <div id="show-player">
-        Jogada de: <strong id="player"></strong>
+
+    <div id="score">
+        Placar <br>
+        <strong id="wins-x" title="Placar de X">0</strong>
+        VS
+        <strong id="wins-o" title="Placar de O">0</strong>
     </div>
-    <p id="show-winner">Ganhador: <strong id="winner"></strong></p>
+
+    <div id="player"></div>
+
+    <div class="modal-blur-winner hide">
+        <div class="modal-shape-winner">
+            <p id="show-winner">
+                Ganhador <br> <strong id="winner"></strong>
+            </p>
+        </div>
+    </div>
 
     <section id="game">
         <div id="row_A">
@@ -48,7 +64,7 @@
             </div>
         </div>
     </section>
-    
-    <script src="./assets/main.js"></script>
+
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>
