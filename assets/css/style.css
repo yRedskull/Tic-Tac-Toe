@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, rgb(26, 25, 25), #181512, rgb(0, 0, 0));
+
+    color: white;
+
+    padding: 10px;
+}
+
+#title {
+    text-align: center;
+    font-size: 3.5em;
+
+}
+
+#player {
+    font-size: 5.5em;
+    font-weight: 700;
+    text-align: center;
+
+    margin: 0 0 30px 0;
+}
+
+
+
+#score {
+    margin: 40px 0 20px 0px;
+
+    text-align: center;
+    font-size: 3em;
+}
+
+#wins-o {
+    color: #008000;
+
+    cursor: default;
+}
+
+#wins-x {
+    color: #ff0000;
+
+    cursor: default;
+}
+
