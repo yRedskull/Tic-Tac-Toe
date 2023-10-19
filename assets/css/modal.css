@@ -1,0 +1,78 @@
+.modal-blur-winner { 
+    position: absolute;
+    width: 98vw;
+    height: 100vh;
+    top: 0;
+
+    padding: 0 20px;
+
+    background: rgba(0, 0, 0, 0.329);
+    z-index: 3253;
+
+}
+
+.modal-shape-winner {
+    background-color: rgba(0, 0, 0, 0.89);
+    color: rgb(255, 255, 255);
+    opacity: 1;
+
+    position: relative;
+
+    left: 50%;
+    
+    padding: 20px;
+
+    border-radius: 10px;
+
+    z-index: 10;
+
+    max-width: 700px;
+
+    animation-name: modal-transition;
+    animation-duration: 200ms;
+
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.modal-blur-winner.hide {
+    display: none;
+}
+
+@keyframes modal-transition {
+    0% {
+        opacity: 0;
+        top: 0%;
+    }
+    100% {
+        opacity: 1;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+}
+
+@keyframes modal-transition-reverse {
+    0% {
+        opacity: 1;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        opacity: 0;
+        top: 0;
+    }
+}
+
+#show-winner {
+    text-align: center;
+    display: block;
+
+    font-size: 2em;
+}
+
+#winner {
+    font-size: 2.5em;
+}
