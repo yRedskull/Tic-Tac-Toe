@@ -1,0 +1,96 @@
+/* WIDTH */
+@media (max-width:628px) {
+    
+}
+
+@media (max-width:520px) {
+    #title {
+        font-size: 3em;
+    }
+
+    #winner {
+        font-size: 2em;
+    }
+
+    #score {
+        font-size: 2.5em;
+    }
+
+    #player {
+        font-size: 5em;
+    }
+
+    #player {
+        font-size: 5.5em;
+    }
+
+    .texts {
+        font-size: 5.5em;
+        transform: translate(0%, 30%);
+    }
+}
+
+@media (max-width:435px) {
+    #player {
+        font-size: 5em;
+    }
+
+    .texts {
+        font-size: 5em;
+        transform: translate(0%, 40%);
+    }
+}
+
+@media (max-width:335px) {
+    #title{
+        font-size: 2.5em;
+    }
+
+    #winner {
+        font-size: 1.5em;
+    }
+
+
+    #player {
+        font-size: 4.5em;
+    }
+
+    .texts{
+        font-size: 4.5em;
+        transform: translate(0%, 50%);
+    }
+
+}
+
+@media (max-width:295px) {
+    #title {
+        font-size: 2em;
+    }
+
+    #winner {
+        font-size: 1em;
+    }
+
+
+    #player {
+        font-size: 4em;
+    }
+
+    .texts{
+        font-size: 4em;
+        transform: translate(0%, 60%);
+    }
+}
+
+@media (max-width:250px) {
+
+}
+
+@media (max-width:200px) {
+    
+}
+
+/* HEIGHT */
+@media (max-height: 700px) {
+
+}
