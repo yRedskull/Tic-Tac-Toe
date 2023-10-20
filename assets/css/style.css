@@ -8,13 +8,12 @@ body {
     background: linear-gradient(to right, rgb(26, 25, 25), #181512, rgb(0, 0, 0));
 
     color: white;
-
-    padding: 10px;
 }
 
 #title {
     text-align: center;
     font-size: 3.5em;
+    margin: 10px;
 
 }
 
