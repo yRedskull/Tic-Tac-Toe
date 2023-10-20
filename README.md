@@ -4,7 +4,7 @@
 * Tic Tac Toe Online: https://yredskull.github.io/Tic-Tac-Toe
 
 ## **Game Tic Tac Toe:**
-## * 📋 TICKETS GAME RULES
+## **📋 TICKETS GAME RULES**
 * The board is a matrix of three rows by three columns.
 * Two players choose a marking each, usually a circle (O) and an x (X).
 * Players play alternately, one mark at a time, in an empty space.
