@@ -161,7 +161,7 @@ class Game {
             this.body.style.overflow = "hidden"
         }
 
-        modal_blur.addEventListener("click", (e) => {
+        this.body.addEventListener("click", (e) => {
             if (!modal_blur.classList.contains("hide")){
                 modal_blur.classList.add("hide")
                 this.body.style.overflow = ""
