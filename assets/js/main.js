@@ -97,27 +97,27 @@ class Game {
             let cont_x = 0
             let cont_o = 0
             win.forEach((n) => {
-                if (this.o.includes(n)) {
+                if (this.o.includes(n) && !this.win) {
                     cont_o++
                     if (cont_o == 3) {
+                        this.wins.O++
                         this.win = this.players[0]
                         this.element_winner.innerText = this.win
-                        this.wins.O++
                     }
                 }  
 
-                if (this.x.includes(n)) {
+                if (this.x.includes(n) && !this.win) {
                     cont_x++
                     if (cont_x == 3) {
+                        this.wins.X++
                         this.win = this.players[1]
                         this.element_winner.innerText = this.win
-                        this.wins.X++
                     }
                 }  
             })
         })
 
-        if (this.blocks_validated.length == 9) {
+        if (this.blocks_validated.length == 9 && !this.win) {
             this.win = "Ninguém"
         }
     }
