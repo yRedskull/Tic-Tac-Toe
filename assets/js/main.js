@@ -14,6 +14,7 @@ class Game {
         this.emoji_draw = ["\u{1F62D}", "\u{1F614}", "\u{1F480}", "\u{1F921}", "\u{1F916}"]
 
         this.element_player = document.querySelector("#player")
+        this.body = document.querySelector("body")
 
         this.element_show_winner = document.querySelector("#show-winner")
         this.element_winner = document.querySelector("#winner")
@@ -157,11 +158,13 @@ class Game {
         
         if (modal_blur.classList.contains("hide")){
             modal_blur.classList.remove("hide")
+            this.body.style.overflow = "hidden"
         }
 
         modal_blur.addEventListener("click", (e) => {
             if (!modal_blur.classList.contains("hide")){
                 modal_blur.classList.add("hide")
+                this.body.style.overflow = ""
             }
         })
 
